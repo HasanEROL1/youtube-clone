@@ -1,5 +1,6 @@
 
 🚀 Özellikler
+
 🎥 Video listeleme (thumbnail + başlık)
 
 🔍 Arama kutusu (API ile entegre)
@@ -13,6 +14,7 @@
 🌐 Responsive tasarım
 
 🧰 Kullanılan Teknolojiler
+
 • Vite
 
 • React
