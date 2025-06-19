@@ -29,4 +29,5 @@
 🖼️ Demo ve Görsel
 
 
-![youtube clone](https://github.com/user-attachments/assets/000da482-1523-42a8-ae56-732e0fd51ac2)
+
+![youtube clone](https://github.com/user-attachments/assets/3c9b2657-3b5e-45e9-9ec1-2a2a128fc5da)
