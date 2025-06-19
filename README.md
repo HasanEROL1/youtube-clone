@@ -1,17 +1,17 @@
 
 🚀 Özellikler
 
- - 🎥 Video listeleme (thumbnail + başlık)
+---  🎥 Video listeleme (thumbnail + başlık)
 
--  🔍 Arama kutusu (API ile entegre)
+----  🔍 Arama kutusu (API ile entegre)
 
--  🧭 Sidebar ile kategori seçimi
+----  🧭 Sidebar ile kategori seçimi
 
--  📺 Video detay sayfası
+----  📺 Video detay sayfası
 
- - ⚡ Hızlı geliştirme (Vite sayesinde)
+---- ⚡ Hızlı geliştirme (Vite sayesinde)
 
--  🌐 Responsive tasarım
+----  🌐 Responsive tasarım
 
 🧰 Kullanılan Teknolojiler
 
