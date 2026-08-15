@@ -28,9 +28,9 @@ const Detail = () => {
             .get("/video/info", { params })
             .then((res) => setVideo(res.data))
             .catch((err) => setError(err.message))
-    }, [])
+    }, [id])
     return (
-        <div className="detail-page h-screen overflow-auto">
+        <div className="h-screen overflow-auto">
             <div className="page-content">
 
                 {/* Video İçeiği */}

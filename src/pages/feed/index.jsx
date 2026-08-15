@@ -8,34 +8,39 @@ import Card from '../../components/Card';
 
 
 const Feed = () => {
-    const [videos, setVideos] = useState(null)
-    const [error, setError] = useState(null)
+  const [videos, setVideos] = useState(null)
+  const [error, setError] = useState(null)
 
-    const [params] = useSearchParams()
-    const selected = params.get("category")
-    useEffect(() => {
-        setVideos(null)
+  const [params] = useSearchParams()
+  const selected = params.get("category")
+  useEffect(() => {
+    setVideos(null)
 
-        const url = !selected ? "/home" : selected === "trending" ? "/trending" : `/search?query=${selected}`
+    const url = !selected ? "/home" : selected === "trending" ? "/trending" : `/search?query=${selected}`
 
-        api
-            .get(url, { params: { geo: "TR", lang: "tr" } })
-            .then((res) => setVideos(res.data.data))
-            .catch((err) => setError(err.message))
-    }, [selected]);
+    api
+      .get(url, { params: { geo: "TR", lang: "tr" } })
+      .then((res) => {
+        console.log("Gelen Yanıt:", res.data.data);
+        const result = res.data.data ? res.data.data : res.data;
+        setVideos(result);
+      })
+
+      .catch((err) => setError(err.message))
+
+  }, [selected]);
 
 
+  return (
+    <div className="flex">
+      <Sidebar />
+      <div className="videos">
+        {error ? (<Error msg={error} />) : !videos ? (<Loader />) :
+          (videos.map((i, key) => <Card key={key} item={i} />))}
 
-    return (
-        <div className="flex">
-            <Sidebar />
-            <div className="videos">
-                {error ? (<Error msg={error} />) : !videos ? (<Loader />) :
-                    (videos.map((i, key) => <Card key={key} item={i} />))}
-
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  )
 }
 
 export default Feed

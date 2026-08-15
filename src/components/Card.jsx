@@ -17,6 +17,8 @@ const Card = ({ item, isRow }) => {
 
     // Kanal Fotoğrafı
     const channelPic = item.channelThumbnail && item.channelThumbnail[0].url
+    
+
     return (
         <Link to={`/watch?v=${item.videoId}`}
             className={isRow ? "row" : "col"}
@@ -38,11 +40,11 @@ const Card = ({ item, isRow }) => {
 
                     <div className="flex gap-3 items-center">
                         <p>
-                            <span>{Number(item.viewCount) ? millify(Number(item.viewCount)) : "0"}</span>
+                         <span>{item.viewCount ? millify(Number(item.viewCount)) : "0"}</span>
 
                             <span className="text-sm ms-1 views ">Görüntülenme</span>
                         </p>
-                        *
+                        
                         {item.isLive ? (
                             <p className="bg-red-500 py-0.5 px-2 rounded-lg">Canlı</p>) : (<p>{item.publishedTimeText}</p>
 

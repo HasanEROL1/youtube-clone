@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react"
 import api from "../../utils/api"
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai"
@@ -46,7 +47,7 @@ const Comments = ({ videoId }) => {
                             key={comment.commentId}
                             className="flex gap-2 sm:gap-3 items-start px-1 py-3 sm:py-4"
                         >
-                            <img src={comment.authorThumbnail[0].url}
+                            <img src={comment.authorThumbnail}
                                 className="rounded-full size-8 sm:size-10" />
                             <div className="flex flex-col gap-2">
                                 <h5 className="flex gap-2 items-center">

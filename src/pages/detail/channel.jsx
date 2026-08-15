@@ -7,7 +7,7 @@ const Channel = ({ video }) => {
             {/* sol */}
             <div className="flex items-center gap-2 sm:gap-4 max-sm:justify-between ">
                 <div className="flex gap-2 sm:gap-4 items-center">
-                    <img src={video.channelThumbnail[0].url}
+                    <img  src={video?.channelThumbnail?.[0]?.url || 'avatar.jpg'}
                         className="rounded-full size-10 sm:size-12"
                     />
 
@@ -24,7 +24,7 @@ const Channel = ({ video }) => {
 
 
             {/* sağ */}
-            <div className="flex items-center bg-secondary rounded-full cursor-pointer max-sm: mt-3 max-sm:w-fit">
+            <div className="flex items-center bg-secondary rounded-full cursor-pointer max-sm:mt-3 max-sm:w-fit">
                 <div className="py-1 px-3 sm:px-4 flex items-center gap-2 font-bold border-r border-gray-500 ">
                     <AiFillLike />
                     <span className="text-sm">{millify(video.likeCount)}</span>
